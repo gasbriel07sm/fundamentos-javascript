@@ -1,0 +1,9 @@
+JS ASSINCRONO
+- um código assincrono leva um tempo para ser executado e pode ser bem sucedido ou não
+ == chamadas para APIs
+ == interações com banco de dados
+
+ - 3 maneiras de lidar com esse tipo de dado
+  == Callback
+  == Promises
+  == Promises com Aync/Await
