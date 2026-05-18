@@ -1,0 +1,30 @@
+class Produto {
+    #preco
+    constructor(nome, preco) {
+        this.nome = nome;
+        this.#preco = preco;
+    }
+
+    get preco() {
+        return `R$ ${this.#preco.toFixed(2)}`
+    }
+
+    set preco(valor) {
+        if (typeof valor !== 'number' || valor < 0) throw new Error('Erro: Preço não pode ser negativo');
+        this.#preco = valor;
+    }
+}
+
+const p = new Produto("Notebook", 3500)
+
+console.log(p.preco)
+p.preco = 4200
+console.log(p.preco)
+
+try {
+    p.preco = -100; 
+} catch (e) {
+    console.error(e.message); 
+}
+
+console.log(p.preco) 
