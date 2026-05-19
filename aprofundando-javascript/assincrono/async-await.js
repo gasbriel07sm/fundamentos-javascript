@@ -4,7 +4,7 @@ const loginUser = (email, password) => {
         const error = false;
 
         if (error) {
-            PromiseRejectionEvent(new Error('error in login'))
+            reject(new Error('error in login'))
         }
 
         console.log('user logged')
